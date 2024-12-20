@@ -3,17 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web3 Game</title>
+    <title>Detective Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e2f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        button {
+            background-color: #ff9f43;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6f00;
+        }
+        .reward {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff9f43;
+        }
+    </style>
 </head>
 <body>
-    <h1>🎮 Добро пожаловать в Web3-игру!</h1>
-    <p>Нажмите на кнопку, чтобы получить награду.</p>
-    <button onclick="claimReward()">Получить токены</button>
+    <div class="container">
+        <h1>🎮 Добро пожаловать в игру "Детектив"!</h1>
+        <p>Нажмите кнопку ниже, чтобы заработать токены!</p>
+        <button id="earnButton">Получить награду</button>
+        <p class="reward" id="rewardMessage"></p>
+    </div>
 
     <script>
-        function claimReward() {
-            alert("🎉 Вы получили 10 токенов!");
-        }
+        document.getElementById('earnButton').addEventListener('click', () => {
+            const rewardMessage = document.getElementById('rewardMessage');
+            rewardMessage.textContent = "🎉 Вы получили 10 токенов!";
+        });
     </script>
 </body>
 </html>
